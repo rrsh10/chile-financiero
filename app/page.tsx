@@ -99,8 +99,21 @@ export default function ChileFinanciero() {
     <>
       <div className="min-h-screen bg-[#0a0f1a] text-[#e8edf5] antialiased overflow-x-hidden">
 
+        {/* BARRA ECOSISTEMA CANOPIA */}
+        <div className="fixed top-0 inset-x-0 z-[60] bg-[#0a0f1a]/95 backdrop-blur-xl border-b border-white/5 text-[11px]">
+          <div className="max-w-7xl mx-auto px-6 h-[30px] flex items-center justify-center gap-3">
+            <span className="text-zinc-500 font-semibold tracking-wide hidden sm:inline">Ecosistema CANOPIA</span>
+            <span className="text-white/10 hidden sm:inline">·</span>
+            <a href="https://canopia.cl" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition">canopia.cl</a>
+            <span className="text-white/10">·</span>
+            <span className="text-sky-400 font-semibold">Chile Financiero</span>
+            <span className="text-white/10">·</span>
+            <a href="https://swingtraderclub.canopia.cl" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-amber-400 transition">Swing Trader Club</a>
+          </div>
+        </div>
+
         {/* NAV */}
-        <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "bg-[#0a0f1a]/90 backdrop-blur-2xl border-b border-white/5" : ""}`}>
+        <header className={`fixed top-[30px] inset-x-0 z-50 transition-all duration-500 ${scrolled ? "bg-[#0a0f1a]/90 backdrop-blur-2xl border-b border-white/5" : ""}`}>
           <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
             <a href="/" className="flex items-center gap-2.5 select-none">
               <span className="text-lg font-black tracking-tight">Chile<span className="text-sky-400">Financiero</span></span>
@@ -123,7 +136,7 @@ export default function ChileFinanciero() {
               {navLinks.map(([label, href]) => (
                 <a key={href} href={href} onClick={() => setMobileMenu(false)} className="block py-3 text-zinc-400 hover:text-white transition text-sm border-b border-white/5">{label}</a>
               ))}
-              <a href="#contacto" onClick={() => setMobileMenu(false)} className="block mt-4 bg-blue-600 text-center py-3.5 rounded-2xl font-bold text-sm">Acceso gratis</a>
+              <a href="#contacto" onClick={() => setMobileMenu(false)} className="block mt-4 bg-sky-600 text-center py-3.5 rounded-2xl font-bold text-sm">Acceso gratis</a>
             </div>
           )}
         </header>
@@ -138,7 +151,7 @@ export default function ChileFinanciero() {
             <div className="max-w-4xl mx-auto text-center">
               <p data-anim data-delay="0ms" className="text-white uppercase tracking-[0.4em] text-xs font-medium mb-6">Educación Financiera · Chile · Gratis</p>
               <h1 data-anim data-delay="100ms" className="font-black leading-none tracking-tight uppercase" style={{ fontSize: "clamp(2.8rem, 8vw, 7rem)" }}>
-                El sistema<br /><span className="text-sky-400">financiero</span><br /><span className="text-red-500">chileno.</span><br />Por fin claro.
+                El sistema<br /><span className="text-sky-400">financiero</span><br /><span className="text-sky-500">chileno.</span><br />Por fin claro.
               </h1>
               <p data-anim data-delay="200ms" className="mt-8 text-zinc-400 text-lg max-w-xl mx-auto leading-relaxed">
                 Aprende a manejar bancos, beneficios sociales, financiamiento PyME y a construir patrimonio en Chile — con quien lo hizo desde adentro.
@@ -156,7 +169,7 @@ export default function ChileFinanciero() {
               <div data-anim data-delay="450ms" className="mt-20 pt-10 border-t border-white/5 grid grid-cols-2 lg:grid-cols-4 gap-8">
                 {[["6","Módulos completos"],["3","Perfiles atendidos"],["Gratis","Para siempre"],["Chile","100% aplicado"]].map(([num, label]) => (
                   <div key={label}>
-                    <p className="text-3xl lg:text-4xl font-black text-red-500">{num}</p>
+                    <p className="text-3xl lg:text-4xl font-black text-sky-500">{num}</p>
                     <p className="text-white text-xs uppercase tracking-widest mt-1">{label}</p>
                   </div>
                 ))}
@@ -169,7 +182,7 @@ export default function ChileFinanciero() {
         <section className="border-t border-white/5 bg-[#0d1321]">
           <div className="max-w-7xl mx-auto px-6 py-24">
             <div className="max-w-3xl mx-auto text-center">
-              <p data-anim className="text-red-400 uppercase tracking-[0.35em] text-xs font-bold mb-5">El problema</p>
+              <p data-anim className="text-sky-400 uppercase tracking-[0.35em] text-xs font-bold mb-5">El problema</p>
               <h2 data-anim data-delay="100ms" className="text-3xl lg:text-5xl font-black uppercase leading-tight">Nadie te enseñó<br /><span className="text-sky-400">cómo funciona esto.</span></h2>
               <p data-anim data-delay="200ms" className="mt-6 text-white/85 text-lg leading-relaxed">
                 El sistema financiero chileno tiene reglas, beneficios, herramientas y trampas. La mayoría navega ese sistema a ciegas — pagando más de lo que debería, perdiendo beneficios que ya le corresponden y tomando decisiones sin información real. Chile Financiero existe para cerrar esa brecha.
@@ -182,18 +195,18 @@ export default function ChileFinanciero() {
         <section id="para-quien" className="border-t border-white/5">
           <div className="max-w-7xl mx-auto px-6 py-28">
             <div data-anim className="mb-16 text-center">
-              <p className="text-red-400 uppercase tracking-[0.35em] text-xs font-bold mb-4">Para quién es</p>
+              <p className="text-sky-400 uppercase tracking-[0.35em] text-xs font-bold mb-4">Para quién es</p>
               <h2 className="text-4xl lg:text-6xl font-black uppercase">Tres perfiles.<br /><span className="text-sky-400">Un mismo sistema.</span></h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {profiles.map(({ Icon, label, items, tags }, i) => (
-                <div key={label} data-anim data-delay={`${i * 100}ms`} className="bg-[#0d1321] border border-zinc-800/60 rounded-3xl p-8 hover:border-red-500/25 transition-all duration-500 flex flex-col items-center text-center">
-                  <Icon className="text-red-400 mb-5" size={28} />
+                <div key={label} data-anim data-delay={`${i * 100}ms`} className="bg-[#0d1321] border border-zinc-800/60 rounded-3xl p-8 hover:border-sky-500/25 transition-all duration-500 flex flex-col items-center text-center">
+                  <Icon className="text-sky-400 mb-5" size={28} />
                   <h3 className="text-xl font-black uppercase mb-4">{label}</h3>
                   <ul className="space-y-2 mb-6">
                     {items.map(item => (
                       <li key={item} className="flex items-start justify-center gap-2.5 text-white/80 text-sm leading-relaxed">
-                        <span className="text-red-400 mt-1.5 flex-shrink-0 text-xs">▸</span>{item}
+                        <span className="text-sky-400 mt-1.5 flex-shrink-0 text-xs">▸</span>{item}
                       </li>
                     ))}
                   </ul>
@@ -210,20 +223,20 @@ export default function ChileFinanciero() {
         <section className="border-t border-white/5 bg-[#0d1321]">
           <div className="max-w-7xl mx-auto px-6 py-28">
             <div data-anim className="mb-16 text-center">
-              <p className="text-red-400 uppercase tracking-[0.35em] text-xs font-bold mb-4">Qué aprenderás</p>
+              <p className="text-sky-400 uppercase tracking-[0.35em] text-xs font-bold mb-4">Qué aprenderás</p>
               <h2 className="text-4xl lg:text-6xl font-black uppercase">6 áreas del<br /><span className="text-sky-400">sistema financiero.</span></h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {areas.map(({ Icon, title, items, color }, i) => (
-                <div key={title} data-anim data-delay={`${i * 80}ms`} className="group bg-[#0a0f1a] border border-zinc-800/50 rounded-3xl p-7 hover:border-red-500/20 transition-all duration-500 flex flex-col items-center text-center">
-                  <div className={`w-10 h-10 rounded-2xl flex items-center justify-center mb-5 ${color === "blue" ? "bg-red-500/8" : "bg-white/5"}`}>
-                    <Icon className={color === "blue" ? "text-red-400" : "text-sky-400"} size={20} />
+                <div key={title} data-anim data-delay={`${i * 80}ms`} className="group bg-[#0a0f1a] border border-zinc-800/50 rounded-3xl p-7 hover:border-sky-500/20 transition-all duration-500 flex flex-col items-center text-center">
+                  <div className={`w-10 h-10 rounded-2xl flex items-center justify-center mb-5 ${color === "blue" ? "bg-sky-500/8" : "bg-white/5"}`}>
+                    <Icon className={color === "blue" ? "text-sky-400" : "text-sky-400"} size={20} />
                   </div>
                   <h3 className="font-bold text-base mb-4">{title}</h3>
                   <ul className="space-y-2">
                     {items.map(item => (
                       <li key={item} className="flex items-start justify-center gap-2.5 text-white/80 text-sm leading-relaxed">
-                        <span className={`mt-1.5 flex-shrink-0 text-xs ${color === "blue" ? "text-red-400" : "text-sky-400"}`}>▸</span>{item}
+                        <span className={`mt-1.5 flex-shrink-0 text-xs ${color === "blue" ? "text-sky-400" : "text-sky-400"}`}>▸</span>{item}
                       </li>
                     ))}
                   </ul>
@@ -237,7 +250,7 @@ export default function ChileFinanciero() {
         <section id="programa" className="border-t border-white/5">
           <div className="max-w-5xl mx-auto px-6 py-28">
             <div data-anim className="mb-16 text-center">
-              <p className="text-red-400 uppercase tracking-[0.35em] text-xs font-bold mb-4">El programa</p>
+              <p className="text-sky-400 uppercase tracking-[0.35em] text-xs font-bold mb-4">El programa</p>
               <h2 className="text-4xl lg:text-6xl font-black uppercase">6 módulos.<br /><span className="text-sky-400">De cero a sistema.</span></h2>
             </div>
             <div className="space-y-3">
@@ -245,10 +258,10 @@ export default function ChileFinanciero() {
                 <div key={mod.num} data-anim data-delay={`${i * 60}ms`} className="border border-zinc-800/60 rounded-2xl overflow-hidden">
                   <button onClick={() => setOpenModule(openModule === i ? null : i)} className="w-full flex items-center justify-center gap-4 p-6 text-center hover:bg-white/2 transition">
                     <div className="flex items-center gap-5">
-                      <span className="text-red-400/40 font-black text-xl font-mono w-10">{mod.num}</span>
+                      <span className="text-sky-400/40 font-black text-xl font-mono w-10">{mod.num}</span>
                       <span className="font-bold text-base">{mod.title}</span>
                     </div>
-                    <ChevronDown size={18} className={`text-red-400 flex-shrink-0 transition-transform duration-300 ${openModule === i ? "rotate-180" : ""}`} />
+                    <ChevronDown size={18} className={`text-sky-400 flex-shrink-0 transition-transform duration-300 ${openModule === i ? "rotate-180" : ""}`} />
                   </button>
                   {openModule === i && (
                     <div className="px-6 pb-7 text-center">
@@ -256,7 +269,7 @@ export default function ChileFinanciero() {
                       <ul className="space-y-2">
                         {mod.content.map(item => (
                           <li key={item} className="flex items-start justify-center gap-3 text-white/80 text-sm leading-relaxed">
-                            <CheckCircle size={13} className="text-red-400 flex-shrink-0 mt-0.5" />{item}
+                            <CheckCircle size={13} className="text-sky-400 flex-shrink-0 mt-0.5" />{item}
                           </li>
                         ))}
                       </ul>
@@ -273,7 +286,7 @@ export default function ChileFinanciero() {
           <div className="max-w-7xl mx-auto px-6 py-28">
             <div className="grid lg:grid-cols-2 gap-20 items-start">
               <div>
-                <p data-anim className="text-red-400 uppercase tracking-[0.35em] text-xs font-bold mb-5 text-center">Quién enseña</p>
+                <p data-anim className="text-sky-400 uppercase tracking-[0.35em] text-xs font-bold mb-5 text-center">Quién enseña</p>
                 <h2 data-anim data-delay="100ms" className="text-4xl lg:text-5xl font-black uppercase leading-tight text-center">Roberto<br /><span className="text-sky-400">Santander</span></h2>
                 <div data-anim data-delay="200ms" className="mt-8 space-y-4 text-white/80 text-base leading-relaxed text-center">
                   <p>Emprendedor chileno con experiencia en <strong className="text-white">banca, seguros, inversiones y negocios reales</strong>. Fundador de Galpón 3, Japi Fiesta y El Mercante.</p>
@@ -286,13 +299,13 @@ export default function ChileFinanciero() {
                   {[["Galpón 3","Centro deportivo · Ñuñoa","https://galpontres.cl"],["Japi Fiesta","Experiencias gastronómicas","https://japifiesta.cl"],["El Mercante","Ecommerce & Marketing Digital","https://elmercante.cl"]].map(([name, cat, url]) => (
                     <a key={name} href={url} target="_blank" rel="noopener noreferrer" className="group block py-4 border-b border-zinc-800/50 last:border-0 hover:-translate-y-0.5 transition-all">
                       <div>
-                        <p className="font-bold text-sm group-hover:text-blue-400 transition">{name}</p>
+                        <p className="font-bold text-sm group-hover:text-sky-400 transition">{name}</p>
                         <p className="text-zinc-600 text-xs mt-0.5">{cat}</p>
                       </div>
                     </a>
                   ))}
                 </div>
-                <div className="bg-blue-600/10 border border-blue-500/20 rounded-3xl p-6 text-center">
+                <div className="bg-sky-600/10 border border-sky-500/20 rounded-3xl p-6 text-center">
                   <p className="text-zinc-300 text-sm leading-relaxed">
                     <strong className="text-white">Aviso:</strong> Chile Financiero es educación financiera. No reemplaza asesoría tributaria, legal ni financiera profesional. El objetivo es que tengas la información para tomar mejores decisiones.
                   </p>
@@ -306,7 +319,7 @@ export default function ChileFinanciero() {
         <section className="border-t border-white/5">
           <div className="max-w-3xl mx-auto px-6 py-28">
             <div data-anim className="text-center mb-16">
-              <p className="text-red-400 uppercase tracking-[0.35em] text-xs font-bold mb-4">FAQ</p>
+              <p className="text-sky-400 uppercase tracking-[0.35em] text-xs font-bold mb-4">FAQ</p>
               <h2 className="text-4xl lg:text-5xl font-black uppercase">Preguntas frecuentes</h2>
             </div>
             <div className="space-y-3">
@@ -314,7 +327,7 @@ export default function ChileFinanciero() {
                 <div key={i} data-anim data-delay={`${i * 60}ms`} className="border border-zinc-800/60 rounded-2xl overflow-hidden">
                   <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-center gap-4 p-6 text-center hover:bg-white/2 transition">
                     <span className="font-semibold text-sm pr-4">{faq.q}</span>
-                    <ChevronDown size={18} className={`text-red-400 flex-shrink-0 transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`} />
+                    <ChevronDown size={18} className={`text-sky-400 flex-shrink-0 transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`} />
                   </button>
                   {openFaq === i && <div className="px-6 pb-6 text-zinc-500 text-sm leading-relaxed text-center">{faq.a}</div>}
                 </div>
@@ -328,12 +341,12 @@ export default function ChileFinanciero() {
           <div className="max-w-7xl mx-auto px-6 py-28">
             <div className="max-w-lg mx-auto">
               <div className="text-center">
-                <p data-anim className="text-red-400 uppercase tracking-[0.35em] text-xs font-bold mb-5">Comenzar</p>
+                <p data-anim className="text-sky-400 uppercase tracking-[0.35em] text-xs font-bold mb-5">Comenzar</p>
                 <h2 data-anim data-delay="100ms" className="text-4xl lg:text-5xl font-black uppercase leading-tight">Comencemos.<br /><span className="text-sky-400">Es gratis.</span></h2>
                 <p data-anim data-delay="200ms" className="mt-6 text-white/80 text-base leading-relaxed max-w-sm mx-auto">Cuéntame en qué situación estás y qué quieres aprender. Te respondo personalmente.</p>
                 <div data-anim data-delay="300ms" className="mt-8 space-y-3 text-zinc-500 text-sm">
-                  <div className="flex items-center justify-center gap-3"><Mail size={15} className="text-blue-400" /><span>rsantanderh@gmail.com</span></div>
-                  <div className="flex items-center justify-center gap-3"><MapPin size={15} className="text-blue-400" /><span>Santiago, Chile — clases online</span></div>
+                  <div className="flex items-center justify-center gap-3"><Mail size={15} className="text-sky-400" /><span>rsantanderh@gmail.com</span></div>
+                  <div className="flex items-center justify-center gap-3"><MapPin size={15} className="text-sky-400" /><span>Santiago, Chile — clases online</span></div>
                 </div>
               </div>
               <div data-anim data-delay="150ms" className="space-y-4 mt-12">
@@ -342,14 +355,14 @@ export default function ChileFinanciero() {
                     <div key={k}>
                       <label className="text-zinc-500 text-xs uppercase tracking-widest block mb-2 text-center">{l}</label>
                       <input type={t} value={form[k as keyof typeof form]} onChange={e => setForm({...form,[k]:e.target.value})} placeholder={p}
-                        className="w-full bg-[#0a0f1a] border border-zinc-800 rounded-2xl px-5 py-4 text-white text-sm placeholder-zinc-700 focus:border-red-500 focus:outline-none transition" />
+                        className="w-full bg-[#0a0f1a] border border-zinc-800 rounded-2xl px-5 py-4 text-white text-sm placeholder-zinc-700 focus:border-sky-500 focus:outline-none transition" />
                     </div>
                   ))}
                 </div>
                 <div>
                   <label className="text-zinc-500 text-xs uppercase tracking-widest block mb-2 text-center">Tu perfil</label>
                   <select value={form.profile} onChange={e => setForm({...form,profile:e.target.value})}
-                    className="w-full bg-[#0a0f1a] border border-zinc-800 rounded-2xl px-5 py-4 text-white text-sm focus:border-red-500 focus:outline-none transition appearance-none">
+                    className="w-full bg-[#0a0f1a] border border-zinc-800 rounded-2xl px-5 py-4 text-white text-sm focus:border-sky-500 focus:outline-none transition appearance-none">
                     <option value="">Selecciona tu perfil</option>
                     <option>Persona natural</option><option>Emprendedor</option><option>PyME establecida</option><option>Profesional independiente</option>
                   </select>
@@ -357,7 +370,7 @@ export default function ChileFinanciero() {
                 <div>
                   <label className="text-zinc-500 text-xs uppercase tracking-widest block mb-2 text-center">¿Qué quieres aprender?</label>
                   <textarea rows={3} value={form.goal} onChange={e => setForm({...form,goal:e.target.value})} placeholder="Ej: Entender mis beneficios de AFP, postular a Corfo..."
-                    className="w-full bg-[#0a0f1a] border border-zinc-800 rounded-2xl px-5 py-4 text-white text-sm placeholder-zinc-700 focus:border-red-500 focus:outline-none transition resize-none" />
+                    className="w-full bg-[#0a0f1a] border border-zinc-800 rounded-2xl px-5 py-4 text-white text-sm placeholder-zinc-700 focus:border-sky-500 focus:outline-none transition resize-none" />
                 </div>
                 <div className="grid grid-cols-2 gap-3 pt-1">
                   <button onClick={sendWhatsApp} className="bg-[#25D366] hover:bg-[#1ebe5d] transition rounded-2xl py-4 font-bold text-black text-sm flex items-center justify-center gap-2"><MessageCircle size={16} /> WhatsApp</button>
