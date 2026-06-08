@@ -6,8 +6,23 @@ import {
   MessageCircle, Mail, MapPin, CheckCircle, Home, CreditCard, Landmark, Heart, Store, BarChart3,
 } from "lucide-react";
 import { DisclaimerLink } from "./components/DisclaimerModal";
+import ContenidoSocial, { type VideoItem, type IgItem } from "./components/ContenidoSocial";
 
 const WHATSAPP = "56997412604";
+
+/* ============================================================
+   CONTENIDO SOCIAL — Chile Financiero (finanzas / Chile)
+   Pega aquí la URL cruda; el ID se extrae solo.
+   Para AGREGAR: añade una línea más al array. Para QUITAR: bórrala.
+   ============================================================ */
+const VIDEOS_CF: VideoItem[] = [
+  { url: "https://www.youtube.com/shorts/QlEL-9BOPKc", title: "Regla 50/30/20: la clave para dominar tus finanzas", tag: "Presupuesto" },
+  { url: "https://www.youtube.com/watch?v=vnw9ESPEOGc", title: "Educación financiera — Sernac Chile", tag: "Educación" },
+];
+const INSTAGRAM_CF: IgItem[] = [
+  // { url: "https://www.instagram.com/reel/XXXXXXXXX/" },
+  // { url: "https://www.instagram.com/p/XXXXXXXXX/" },
+];
 
 const profiles = [
   { Icon: Users,    label: "Persona Natural",  items: ["El sistema financiero te parece confuso o nunca te lo explicaron bien","No sabes cómo funciona tu AFP ni tu Fonasa realmente","Quieres conocer tus derechos y los beneficios que ya te corresponden","Tomas decisiones financieras sin información suficiente"], tags: ["AFP","Fonasa","Subsidios","Deudas","Ahorro"] },
@@ -93,7 +108,7 @@ export default function ChileFinanciero() {
     window.open(`mailto:rsantanderh@gmail.com?subject=${s}&body=${b}`);
   };
 
-  const navLinks: [string, string][] = [["Para quién","#para-quien"],["Programa","#programa"],["Sobre Roberto","#sobre-roberto"],["Contacto","#contacto"]];
+  const navLinks: [string, string][] = [["Para quién","#para-quien"],["Programa","#programa"],["Contenido","#contenido"],["Sobre Roberto","#sobre-roberto"],["Contacto","#contacto"]];
 
   return (
     <>
@@ -280,6 +295,18 @@ export default function ChileFinanciero() {
             </div>
           </div>
         </section>
+
+        {/* CONTENIDO SOCIAL */}
+        <ContenidoSocial
+          accent="sky"
+          sectionClassName="bg-[#0d1321]"
+          eyebrow="Aprende en video"
+          title={<>En video.<br /><span className="text-sky-400">Y en Instagram.</span></>}
+          subtitle="Beneficios sociales, bancos, financiamiento PyME y más — explicado simple. Dale play y míralo aquí mismo, sin salir de la página."
+          videos={VIDEOS_CF}
+          instagram={INSTAGRAM_CF}
+          instagramProfile="https://instagram.com/rsantanderh"
+        />
 
         {/* SOBRE ROBERTO */}
         <section id="sobre-roberto" className="border-t border-white/5 bg-[#0d1321]">
